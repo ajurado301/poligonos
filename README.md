@@ -6,3 +6,6 @@
 
 # Clase Triangulo
 - Implementación de la clase Triangulo
+
+# Clase Cuadrado
+- Implementación de la clase Cuadrado

@@ -60,7 +60,7 @@ class Triangulo extends Poligono {
         this.numeroLados = 3;
     }
 
-    // Métodos públicos
+    // Métodos públicos heredados
     public calcularArea(): number {
         return this.base * this.altura / 2;
     }
@@ -68,3 +68,23 @@ class Triangulo extends Poligono {
         return this.base * 3;
     }
 }
+
+// Clase Cuadrado
+class Cuadrdado extends Poligono {
+
+    // Constructor
+    constructor() {
+        super();
+        this.tipo = Poligono.CUADRADO;
+        this.numeroLados = 4;
+    }
+
+    // Métodos públicos heredados
+    public calcularArea(): number {
+        return this.longitudLados ** 2;
+    }
+    public calcularPerimetro(): number {
+        return this.longitudLados * 4;
+    }
+}
+
