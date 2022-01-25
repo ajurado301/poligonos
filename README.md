@@ -15,3 +15,6 @@
 
 ## Clase abstracta Factory
 - Implementación de la clase abstracta Factory
+
+## Tests
+- Test de las clases desde main.ts

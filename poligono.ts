@@ -31,7 +31,7 @@ abstract class Poligono {
     public setLongitudLados(longitudLados: number): void { this.longitudLados = longitudLados };
     // base
     public getBase(): number { return this.base };
-    public setBase(base: number): void { this.longitudLados = base };
+    public setBase(base: number): void { this.base = base };
     // altura
     public getAltura(): number { return this.altura };
     public setAltura(altura: number): void { this.altura = altura };
@@ -119,8 +119,10 @@ class Circulo extends Poligono {
 // Clase abstracta Factory
 export abstract class Factory {
 
+    prueba: number =0;
+
     // Método público
-    public getInstance(tipo: string): any {
+    public static getInstance(tipo: string): any {
         let result: any;
         switch (tipo) {
             case Poligono.TRIANGULO:
