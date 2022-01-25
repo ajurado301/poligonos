@@ -70,7 +70,7 @@ class Triangulo extends Poligono {
 }
 
 // Clase Cuadrado
-class Cuadrdado extends Poligono {
+class Cuadrado extends Poligono {
 
     // Constructor
     constructor() {
@@ -113,6 +113,27 @@ class Circulo extends Poligono {
     }
     public calcularPerimetro(): number {
         return 2 * Math.PI * this.radio;
+    }
+}
+
+// Clase abstracta Factory
+export abstract class Factory {
+
+    // Método público
+    public getInstance(tipo: string): any {
+        let result: any;
+        switch (tipo) {
+            case Poligono.TRIANGULO:
+                result = new Triangulo();
+                break;
+            case Poligono.CUADRADO:
+                result = new Cuadrado();
+                break;
+            case Poligono.CIRCULO:
+                result = new Circulo();
+                break;
+        };
+        return result;
     }
 }
 
