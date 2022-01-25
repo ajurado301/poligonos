@@ -1,5 +1,8 @@
 # Miniproyecto poligonos
 - Inicio de proyecto
 
-# Clase abstracta poligono
-- Implementación de la clase abstracta poligono
+# Clase abstracta Poligono
+- Implementación de la clase abstracta Poligono
+
+# Clase Triangulo
+- Implementación de la clase Triangulo

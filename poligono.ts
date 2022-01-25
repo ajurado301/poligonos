@@ -50,3 +50,21 @@ abstract class Poligono {
     }
 }
 
+// Clase Triangulo
+class Triangulo extends Poligono {
+
+    // Constructor
+    constructor() {
+        super();
+        this.tipo = Poligono.TRIANGULO;
+        this.numeroLados = 3;
+    }
+
+    // Métodos públicos
+    public calcularArea(): number {
+        return this.base * this.altura / 2;
+    }
+    public calcularPerimetro(): number {
+        return this.base * 3;
+    }
+}
