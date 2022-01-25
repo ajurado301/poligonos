@@ -2,12 +2,12 @@
 // Clase abstracta Poligono
 abstract class Poligono {
 
-    // Atributos estáticos
+    // Atributos estáticos (Para uso sin instanciar la clase)
     public static TRIANGULO = "Triangulo";
     public static CUADRADO = "Cuadrado";
     public static CIRCULO = "Circulo";
 
-    // Atributos protegidos
+    // Atributos protegidos (para uso exclusivo de las clases hijas)
     protected numeroLados: number;
     protected longitudLados: number;
     protected base: number;
@@ -85,6 +85,34 @@ class Cuadrdado extends Poligono {
     }
     public calcularPerimetro(): number {
         return this.longitudLados * 4;
+    }
+}
+
+// Clase Circulo
+class Circulo extends Poligono {
+
+    // Atributo privado
+    private radio: number;
+
+    // Constructor
+    constructor() {
+        super();
+        this.radio = 0;
+        this.tipo = Poligono.CIRCULO;
+        this.numeroLados = Infinity;
+    }
+
+    // getters y setters
+    // radio
+    public getRadio(): number { return this.radio };
+    public setRadio(radio: number): void { this.radio = radio }
+
+    // Métodos públicos heredados
+    public calcularArea(): number {
+        return Math.PI * (this.radio ** 2);
+    }
+    public calcularPerimetro(): number {
+        return 2 * Math.PI * this.radio;
     }
 }
 
