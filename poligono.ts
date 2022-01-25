@@ -119,8 +119,6 @@ class Circulo extends Poligono {
 // Clase abstracta Factory
 export abstract class Factory {
 
-    prueba: number =0;
-
     // Método público
     public static getInstance(tipo: string): any {
         let result: any;
