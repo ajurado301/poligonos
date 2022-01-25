@@ -13,5 +13,5 @@
 ## Clase Circulo
 - Implementación de la clase Circulo
 
-## Clase Factory
-- Implementación de la clase Factory
+## Clase abstracta Factory
+- Implementación de la clase abstracta Factory
